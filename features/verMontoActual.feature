@@ -1,10 +1,10 @@
 Feature: Mensaje de bienvenida
 Cuando: Estoy en la pagina principal
-Quiero: Recibir un mensaje de bienvenida
-Para: Sentirme bienvenido
+Quiero: Deberia ver mi monto actual
+Para: Ver mi monto actual
 
 Scenario: Mensaje
 Given estoy en la pagina principal
-Then Deberia ver "Bienvenido al programa"
+Then Deberia ver "Monto: 0"
 
 
