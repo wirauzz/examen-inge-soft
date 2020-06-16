@@ -25,10 +25,18 @@ RSpec.describe Cuenta do
     it "No deberia permitirme sacar mas de lo que tengo en el monto actual" do
         cuenta = Cuenta.new
         cuenta.depositar(50)
-        expect(cuenta.extraer(60)).to eq "No cuenta con los suficientes fondos para esta transaccion"
+        expect(cuenta.extraer(60)).to eq "No cuenta con los suficientes fondos para esta transaccion"    
+    end
+
+    it "Deberia permitir la transferencia entre cuentas" do 
+        cuenta1= Cuenta.new
+        cuenta2= Cuenta.new
+        cuenta1.depositar(100)
+        cuenta2.depositar(200)
+        cuenta1.transferencia(cuenta1)
+
         
     end
 
-    
 
 end
