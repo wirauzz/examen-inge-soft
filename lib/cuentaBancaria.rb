@@ -14,6 +14,10 @@ class Cuenta
     end
 
     def extraer(monto)
-        @monto -= monto
+        if(@monto < monto) then
+            return "No cuenta con los suficientes fondos para esta transaccion"
+        else
+            @monto -= monto
+        end
     end    
 end
